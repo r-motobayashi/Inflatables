@@ -1,0 +1,1 @@
+/usr/bin/libtool -c -static -o libparametrization_lib.a CMakeFiles/parametrization_lib.dir/parametrization.cc.o CMakeFiles/parametrization_lib.dir/parametrization_newton.cc.o CMakeFiles/parametrization_lib.dir/DualLaplacianStencil.cc.o

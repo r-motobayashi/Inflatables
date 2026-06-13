@@ -1,0 +1,1 @@
+/usr/bin/libtool -c -static -o libinflation_lib.a CMakeFiles/inflation_lib.dir/InflatableSheet.cc.o CMakeFiles/inflation_lib.dir/SheetOptimizer.cc.o CMakeFiles/inflation_lib.dir/TargetAttractedInflation.cc.o CMakeFiles/inflation_lib.dir/inflation_newton.cc.o CMakeFiles/inflation_lib.dir/InflatedSurfaceAnalysis.cc.o CMakeFiles/inflation_lib.dir/TargetSurfaceFitter.cc.o

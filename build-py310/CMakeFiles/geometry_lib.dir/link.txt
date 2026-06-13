@@ -1,0 +1,1 @@
+/usr/bin/libtool -c -static -o libgeometry_lib.a CMakeFiles/geometry_lib.dir/curvature.cc.o

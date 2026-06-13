@@ -1,0 +1,5 @@
+add_test( svd_sensitivity /Users/ryosukemotobayashi/Inflatables/build-py310/tests/unit_tests svd_sensitivity  )
+set_tests_properties( svd_sensitivity PROPERTIES WORKING_DIRECTORY /Users/ryosukemotobayashi/Inflatables/build-py310/tests)
+add_test( tft_comparison /Users/ryosukemotobayashi/Inflatables/build-py310/tests/unit_tests tft_comparison  )
+set_tests_properties( tft_comparison PROPERTIES WORKING_DIRECTORY /Users/ryosukemotobayashi/Inflatables/build-py310/tests)
+set( unit_tests_TESTS svd_sensitivity tft_comparison)

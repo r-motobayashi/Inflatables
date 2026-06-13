@@ -1,0 +1,21 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/ryosukemotobayashi/Inflatables/build-py310/cmake_install.cmake",
+		"/Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/cmake_install.cmake",
+		"/Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/tbb/cmake_install.cmake",
+		"/Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/triangle/cmake_install.cmake",
+		"/Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/src/lib/cmake_install.cmake",
+		"/Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/src/lib/MeshFEM/cmake_install.cmake",
+		"/Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/3rdparty/pybind11/cmake_install.cmake",
+		"/Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/src/python_bindings/cmake_install.cmake",
+		"/Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/cmake_install.cmake",
+		"/Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/OffscreenRenderer/cmake_install.cmake",
+		"/Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/StripePatterns/cmake_install.cmake",
+		"/Users/ryosukemotobayashi/Inflatables/build-py310/wall_generation/cmake_install.cmake",
+		"/Users/ryosukemotobayashi/Inflatables/build-py310/python_bindings/cmake_install.cmake",
+		"/Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/3rdparty/Catch2/cmake_install.cmake",
+		"/Users/ryosukemotobayashi/Inflatables/build-py310/tests/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

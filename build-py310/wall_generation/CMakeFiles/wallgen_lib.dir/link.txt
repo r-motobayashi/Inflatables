@@ -1,0 +1,1 @@
+/usr/bin/libtool -c -static -o libwallgen_lib.a CMakeFiles/wallgen_lib.dir/evaluate_stripe_field.cc.o CMakeFiles/wallgen_lib.dir/extract_contours.cc.o

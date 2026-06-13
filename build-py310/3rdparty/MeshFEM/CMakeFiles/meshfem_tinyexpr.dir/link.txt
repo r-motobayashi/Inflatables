@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmeshfem_tinyexpr.a CMakeFiles/meshfem_tinyexpr.dir/3rdparty/tinyexpr/tinyexpr.c.o
+/usr/bin/ranlib libmeshfem_tinyexpr.a

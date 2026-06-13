@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/StripePatterns.dir/src/Complex.cpp.o"
+  "CMakeFiles/StripePatterns.dir/src/Complex.cpp.o.d"
+  "CMakeFiles/StripePatterns.dir/src/DenseMatrix.cpp.o"
+  "CMakeFiles/StripePatterns.dir/src/DenseMatrix.cpp.o.d"
+  "CMakeFiles/StripePatterns.dir/src/Edge.cpp.o"
+  "CMakeFiles/StripePatterns.dir/src/Edge.cpp.o.d"
+  "CMakeFiles/StripePatterns.dir/src/Face.cpp.o"
+  "CMakeFiles/StripePatterns.dir/src/Face.cpp.o.d"
+  "CMakeFiles/StripePatterns.dir/src/HalfEdge.cpp.o"
+  "CMakeFiles/StripePatterns.dir/src/HalfEdge.cpp.o.d"
+  "CMakeFiles/StripePatterns.dir/src/LinearContext.cpp.o"
+  "CMakeFiles/StripePatterns.dir/src/LinearContext.cpp.o.d"
+  "CMakeFiles/StripePatterns.dir/src/LinearEquation.cpp.o"
+  "CMakeFiles/StripePatterns.dir/src/LinearEquation.cpp.o.d"
+  "CMakeFiles/StripePatterns.dir/src/LinearPolynomial.cpp.o"
+  "CMakeFiles/StripePatterns.dir/src/LinearPolynomial.cpp.o.d"
+  "CMakeFiles/StripePatterns.dir/src/LinearSystem.cpp.o"
+  "CMakeFiles/StripePatterns.dir/src/LinearSystem.cpp.o.d"
+  "CMakeFiles/StripePatterns.dir/src/Mesh.cpp.o"
+  "CMakeFiles/StripePatterns.dir/src/Mesh.cpp.o.d"
+  "CMakeFiles/StripePatterns.dir/src/MeshIO.cpp.o"
+  "CMakeFiles/StripePatterns.dir/src/MeshIO.cpp.o.d"
+  "CMakeFiles/StripePatterns.dir/src/Quaternion.cpp.o"
+  "CMakeFiles/StripePatterns.dir/src/Quaternion.cpp.o.d"
+  "CMakeFiles/StripePatterns.dir/src/Real.cpp.o"
+  "CMakeFiles/StripePatterns.dir/src/Real.cpp.o.d"
+  "CMakeFiles/StripePatterns.dir/src/SparseMatrix.cpp.o"
+  "CMakeFiles/StripePatterns.dir/src/SparseMatrix.cpp.o.d"
+  "CMakeFiles/StripePatterns.dir/src/Variable.cpp.o"
+  "CMakeFiles/StripePatterns.dir/src/Variable.cpp.o.d"
+  "CMakeFiles/StripePatterns.dir/src/Vector.cpp.o"
+  "CMakeFiles/StripePatterns.dir/src/Vector.cpp.o.d"
+  "CMakeFiles/StripePatterns.dir/src/Vertex.cpp.o"
+  "CMakeFiles/StripePatterns.dir/src/Vertex.cpp.o.d"
+  "libStripePatterns.a"
+  "libStripePatterns.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/StripePatterns.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

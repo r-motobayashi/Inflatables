@@ -1,0 +1,1 @@
+/usr/bin/libtool -c -static -o libmetric_fit_lib.a CMakeFiles/metric_fit_lib.dir/MetricFitter.cc.o CMakeFiles/metric_fit_lib.dir/fit_metric_newton.cc.o
