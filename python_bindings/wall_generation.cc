@@ -66,12 +66,39 @@ PYBIND11_MODULE(wall_generation, m) {
             py::arg("targetEdgeSpacing") = std::numeric_limits<double>::max(),
             py::arg("minContourLen") = 0);
 
-    m.def("triangulate_channel_walls", [](const std::vector<Eigen::Vector2d> &pts,
-                                          std::vector<std::pair<size_t, size_t>> &edges,
+    m.def("triangulate_channel_walls", [](py::sequence pyPts,
+                                          py::sequence pyEdges,
                                           double triArea,
                                           const std::string &flags,
                                           bool omitQualityFlag,
-                                          const std::vector<Point2D> &holePoints) {
+                                          py::object pyHolePoints) {
+            std::vector<Eigen::Vector2d> pts;
+            pts.reserve(py::len(pyPts));
+            for (py::handle p : pyPts) {
+                py::sequence sp = py::reinterpret_borrow<py::sequence>(p);
+                if (py::len(sp) != 2) throw std::runtime_error("Expected 2D points");
+                pts.emplace_back(sp[0].cast<double>(), sp[1].cast<double>());
+            }
+
+            std::vector<std::pair<size_t, size_t>> edges;
+            edges.reserve(py::len(pyEdges));
+            for (py::handle e : pyEdges) {
+                py::sequence se = py::reinterpret_borrow<py::sequence>(e);
+                if (py::len(se) != 2) throw std::runtime_error("Expected edge endpoint pairs");
+                edges.emplace_back(se[0].cast<size_t>(), se[1].cast<size_t>());
+            }
+
+            std::vector<Point2D> holePoints;
+            if (!pyHolePoints.is_none()) {
+                py::sequence holes = py::reinterpret_borrow<py::sequence>(pyHolePoints);
+                holePoints.reserve(py::len(holes));
+                for (py::handle h : holes) {
+                    py::sequence sh = py::reinterpret_borrow<py::sequence>(h);
+                    if (py::len(sh) != 2) throw std::runtime_error("Expected 2D hole points");
+                    holePoints.emplace_back(sh[0].cast<double>(), sh[1].cast<double>());
+                }
+            }
+
             std::vector<MeshIO::IOVertex > vertices;
             std::vector<MeshIO::IOElement> elements;
             std::vector<int> pointMarkers;
@@ -79,7 +106,7 @@ PYBIND11_MODULE(wall_generation, m) {
             triangulatePSLG(pts, edges, holePoints,
                             vertices, elements, triArea, flags, &pointMarkers, &markedEdges, omitQualityFlag);
             return py::make_tuple(std::make_shared<Mesh>(elements, vertices), pointMarkers, markedEdges);
-        }, py::arg("pts"), py::arg("edges"), py::arg("triArea") = 0.01, py::arg("flags") = "", py::arg("omitQualityFlag") = false, py::arg("holePoints") = std::vector<Point2D>());
+        }, py::arg("pts"), py::arg("edges"), py::arg("triArea") = 0.01, py::arg("flags") = "", py::arg("omitQualityFlag") = false, py::arg("holePoints") = py::none());
 
     ////////////////////////////////////////////////////////////////////////////////
     // Enable output redirection from Python side

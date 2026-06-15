@@ -284,6 +284,9 @@ CMAKE_OSX_DEPLOYMENT_TARGET:STRING=
 // inside the indicated SDK.
 CMAKE_OSX_SYSROOT:STRING=
 
+//No help, variable specified on the command line.
+CMAKE_PREFIX_PATH:UNINITIALIZED=/opt/homebrew
+
 //Value Computed by CMake
 CMAKE_PROJECT_COMPAT_VERSION:STATIC=
 
@@ -428,11 +431,30 @@ DART_TESTING_TIMEOUT:STRING=1500
 //The directory containing a CMake configuration file for Eigen3.
 Eigen3_DIR:PATH=Eigen3_DIR-NOTFOUND
 
+//Directory under which to collect all populated content
+FETCHCONTENT_BASE_DIR:PATH=/Users/ryosukemotobayashi/Inflatables/build-py310/_deps
+
+//Disables all attempts to download or update content and assumes
+// source dirs already exist
+FETCHCONTENT_FULLY_DISCONNECTED:BOOL=OFF
+
+//Enables QUIET option for all content population
+FETCHCONTENT_QUIET:BOOL=ON
+
+//Enables UPDATE_DISCONNECTED behavior for all content population
+FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
+
 //The directory containing a CMake configuration file for GLEW.
-GLEW_DIR:PATH=GLEW_DIR-NOTFOUND
+GLEW_DIR:PATH=/opt/homebrew/lib/cmake/glew
 
 //Path to a file.
 GLEW_INCLUDE_DIR:PATH=GLEW_INCLUDE_DIR-NOTFOUND
+
+//Path to a library.
+GLEW_LIBRARY_DEBUG:FILEPATH=GLEW_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+GLEW_LIBRARY_RELEASE:FILEPATH=GLEW_LIBRARY_RELEASE-NOTFOUND
 
 //Path to a library.
 GLEW_SHARED_LIBRARY_DEBUG:FILEPATH=GLEW_SHARED_LIBRARY_DEBUG-NOTFOUND
@@ -591,6 +613,15 @@ OffscreenRenderer_IS_TOP_LEVEL:STATIC=OFF
 //Value Computed by CMake
 OffscreenRenderer_SOURCE_DIR:STATIC=/Users/ryosukemotobayashi/Inflatables/3rdparty/MeshFEM/3rdparty/OffscreenRenderer
 
+//Path to a library.
+PNG_LIBRARY_DEBUG:FILEPATH=PNG_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+PNG_LIBRARY_RELEASE:FILEPATH=/opt/homebrew/lib/libpng.dylib
+
+//Path to a file.
+PNG_PNG_INCLUDE_DIR:PATH=/opt/homebrew/include
+
 //Force new FindPython
 PYBIND11_FINDPYTHON:BOOL=OFF
 
@@ -660,6 +691,15 @@ UMFPACK_LIBRARIES:FILEPATH=/opt/homebrew/lib/libumfpack.dylib
 //Use the software rasterization library OSMesa instead of a GPU-accelerated
 // EGL/CGL context
 USE_OSMESA:BOOL=OFF
+
+//Path to a file.
+ZLIB_INCLUDE_DIR:PATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
+
+//Path to a library.
+ZLIB_LIBRARY_DEBUG:FILEPATH=ZLIB_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+ZLIB_LIBRARY_RELEASE:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libz.tbd
 
 //The directory containing a CMake configuration file for boost_atomic.
 boost_atomic_DIR:PATH=/opt/homebrew/lib/cmake/boost_atomic-1.90.0
@@ -878,7 +918,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=15
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=16
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -957,6 +997,8 @@ CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //Details about finding CHOLMOD
 FIND_PACKAGE_MESSAGE_DETAILS_CHOLMOD:INTERNAL=[/opt/homebrew/include/suitesparse][/opt/homebrew/lib/libcholmod.dylib;/opt/homebrew/lib/libamd.dylib;/opt/homebrew/lib/libcolamd.dylib;/opt/homebrew/lib/libcamd.dylib;/opt/homebrew/lib/libccolamd.dylib][v()]
+//Details about finding GLEW
+FIND_PACKAGE_MESSAGE_DETAILS_GLEW:INTERNAL=[/opt/homebrew/lib/cmake/glew/glew-config.cmake][v()]
 //Details about finding OpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework][/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework][ ][v()]
 //Details about finding PYTHON
@@ -969,6 +1011,10 @@ FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 FIND_PACKAGE_MESSAGE_DETAILS_UMFPACK:INTERNAL=[/opt/homebrew/include/suitesparse][/opt/homebrew/lib/libumfpack.dylib;/opt/homebrew/lib/libcolamd.dylib;/opt/homebrew/lib/libamd.dylib][v()]
 //ADVANCED property for variable: GLEW_INCLUDE_DIR
 GLEW_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GLEW_LIBRARY_DEBUG
+GLEW_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GLEW_LIBRARY_RELEASE
+GLEW_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GLEW_SHARED_LIBRARY_DEBUG
 GLEW_SHARED_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GLEW_SHARED_LIBRARY_RELEASE
@@ -1117,6 +1163,12 @@ OPENGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
 OPENGL_gl_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_glu_LIBRARY
 OPENGL_glu_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PNG_LIBRARY_DEBUG
+PNG_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PNG_LIBRARY_RELEASE
+PNG_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PNG_PNG_INCLUDE_DIR
+PNG_PNG_INCLUDE_DIR-ADVANCED:INTERNAL=1
 PYBIND11_INCLUDE_DIR:INTERNAL=/Users/ryosukemotobayashi/Inflatables/3rdparty/MeshFEM/3rdparty/pybind11/include
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
@@ -1141,6 +1193,12 @@ SUPPORTS_MRTM:INTERNAL=
 UMFPACK_INCLUDES-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: UMFPACK_LIBRARIES
 UMFPACK_LIBRARIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_INCLUDE_DIR
+ZLIB_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_DEBUG
+ZLIB_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_RELEASE
+ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //Catch2 full path to CatchAddTests.cmake helper file
 _CATCH_DISCOVER_TESTS_SCRIPT:INTERNAL=/Users/ryosukemotobayashi/Inflatables/3rdparty/MeshFEM/3rdparty/Catch2/contrib/CatchAddTests.cmake
 //CMAKE_INSTALL_PREFIX during last run

@@ -6,7 +6,5 @@ C_DEFINES = -DANSI_DECLARATORS -DTRILIBRARY
 
 C_INCLUDES = 
 
-C_FLAGSarm64 = -O3 -arch arm64 -fPIC   -fdiagnostics-color=always
-
-C_FLAGS = -O3 -arch arm64 -fPIC   -fdiagnostics-color=always
+C_FLAGS = -O3 -fPIC   -fdiagnostics-color=always -fno-strict-aliasing -fvisibility=hidden
 

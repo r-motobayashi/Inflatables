@@ -471,6 +471,45 @@ parametrization/fast:
 .PHONY : parametrization/fast
 
 #=============================================================================
+# Target rules for targets named demo
+
+# Build rule for target.
+demo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo
+.PHONY : demo
+
+# fast build rule for target.
+demo/fast:
+	$(MAKE) $(MAKESILENT) -f 3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/OffscreenRenderer/CMakeFiles/demo.dir/build.make 3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/OffscreenRenderer/CMakeFiles/demo.dir/build
+.PHONY : demo/fast
+
+#=============================================================================
+# Target rules for targets named demo_multicontext
+
+# Build rule for target.
+demo_multicontext: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_multicontext
+.PHONY : demo_multicontext
+
+# fast build rule for target.
+demo_multicontext/fast:
+	$(MAKE) $(MAKESILENT) -f 3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/OffscreenRenderer/CMakeFiles/demo_multicontext.dir/build.make 3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/OffscreenRenderer/CMakeFiles/demo_multicontext.dir/build
+.PHONY : demo_multicontext/fast
+
+#=============================================================================
+# Target rules for targets named _offscreen_renderer
+
+# Build rule for target.
+_offscreen_renderer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _offscreen_renderer
+.PHONY : _offscreen_renderer
+
+# fast build rule for target.
+_offscreen_renderer/fast:
+	$(MAKE) $(MAKESILENT) -f 3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/python_bindings/CMakeFiles/_offscreen_renderer.dir/build.make 3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/python_bindings/CMakeFiles/_offscreen_renderer.dir/build
+.PHONY : _offscreen_renderer/fast
+
+#=============================================================================
 # Target rules for targets named StripePatterns
 
 # Build rule for target.
@@ -625,6 +664,19 @@ test_tension_field_energy: cmake_check_build_system
 test_tension_field_energy/fast:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_tension_field_energy.dir/build.make tests/CMakeFiles/test_tension_field_energy.dir/build
 .PHONY : test_tension_field_energy/fast
+
+#=============================================================================
+# Target rules for targets named triangle_smoke
+
+# Build rule for target.
+triangle_smoke: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 triangle_smoke
+.PHONY : triangle_smoke
+
+# fast build rule for target.
+triangle_smoke/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/triangle_smoke.dir/build.make tests/CMakeFiles/triangle_smoke.dir/build
+.PHONY : triangle_smoke/fast
 
 #=============================================================================
 # Target rules for targets named unit_tests
@@ -1336,8 +1388,11 @@ help:
 	@echo "... MeshFEM"
 	@echo "... StripePatterns"
 	@echo "... _benchmark"
+	@echo "... _offscreen_renderer"
 	@echo "... _parallelism"
 	@echo "... curvature"
+	@echo "... demo"
+	@echo "... demo_multicontext"
 	@echo "... differential_operators"
 	@echo "... field_sampler"
 	@echo "... filters"
@@ -1364,6 +1419,7 @@ help:
 	@echo "... test_svd_sensitivity"
 	@echo "... test_tension_field_energy"
 	@echo "... triangle"
+	@echo "... triangle_smoke"
 	@echo "... triangulation"
 	@echo "... unit_tests"
 	@echo "... wall_generation"

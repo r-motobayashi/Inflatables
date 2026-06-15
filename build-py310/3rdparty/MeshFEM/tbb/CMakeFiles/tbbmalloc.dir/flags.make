@@ -6,7 +6,5 @@ CXX_DEFINES = -DTBB_SUPPRESS_DEPRECATED_MESSAGES=1 -DUSE_PTHREAD -D__TBBMALLOC_B
 
 CXX_INCLUDES = -I/Users/ryosukemotobayashi/Inflatables/3rdparty/MeshFEM/3rdparty/tbb/include -I/Users/ryosukemotobayashi/Inflatables/3rdparty/MeshFEM/3rdparty/tbb/src -I/Users/ryosukemotobayashi/Inflatables/3rdparty/MeshFEM/3rdparty/tbb/src/rml/include -I/Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/tbb -I/Users/ryosukemotobayashi/Inflatables/build-py310
 
-CXX_FLAGSarm64 =  -Wall -Wextra -pedantic -Wno-comment -stdlib=libc++ -D_LIBCPP_VERSION -O3 -std=c++11 -arch arm64 -fPIC   -fdiagnostics-color=always -fno-rtti -fno-exceptions 
-
-CXX_FLAGS =  -Wall -Wextra -pedantic -Wno-comment -stdlib=libc++ -D_LIBCPP_VERSION -O3 -std=c++11 -arch arm64 -fPIC   -fdiagnostics-color=always -fno-rtti -fno-exceptions 
+CXX_FLAGS =  -Wall -Wextra -pedantic -Wno-comment -stdlib=libc++ -D_LIBCPP_VERSION -O3 -std=c++11 -fPIC   -fdiagnostics-color=always -fno-rtti -fno-exceptions 
 

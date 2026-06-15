@@ -23,6 +23,11 @@ set_target_properties(test_tension_field_energy PROPERTIES CXX_STANDARD 14)
 set_target_properties(test_tension_field_energy PROPERTIES CXX_STANDARD_REQUIRED ON)
 target_link_libraries(test_tension_field_energy parametrization_lib)
 
+add_executable(triangle_smoke triangle_smoke.cc)
+set_target_properties(triangle_smoke PROPERTIES CXX_STANDARD 14)
+set_target_properties(triangle_smoke PROPERTIES CXX_STANDARD_REQUIRED ON)
+target_link_libraries(triangle_smoke MeshFEM)
+
 ################################################################################
 # Catch2
 ################################################################################

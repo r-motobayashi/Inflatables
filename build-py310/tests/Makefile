@@ -242,6 +242,20 @@ test_tension_field_energy/fast:
 .PHONY : test_tension_field_energy/fast
 
 # Convenience name for target.
+tests/CMakeFiles/triangle_smoke.dir/rule:
+	cd /Users/ryosukemotobayashi/Inflatables/build-py310 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/triangle_smoke.dir/rule
+.PHONY : tests/CMakeFiles/triangle_smoke.dir/rule
+
+# Convenience name for target.
+triangle_smoke: tests/CMakeFiles/triangle_smoke.dir/rule
+.PHONY : triangle_smoke
+
+# fast build rule for target.
+triangle_smoke/fast:
+	cd /Users/ryosukemotobayashi/Inflatables/build-py310 && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/triangle_smoke.dir/build.make tests/CMakeFiles/triangle_smoke.dir/build
+.PHONY : triangle_smoke/fast
+
+# Convenience name for target.
 tests/CMakeFiles/unit_tests.dir/rule:
 	cd /Users/ryosukemotobayashi/Inflatables/build-py310 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/unit_tests.dir/rule
 .PHONY : tests/CMakeFiles/unit_tests.dir/rule
@@ -839,6 +853,30 @@ test_tension_field_energy.cc.s:
 	cd /Users/ryosukemotobayashi/Inflatables/build-py310 && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_tension_field_energy.dir/build.make tests/CMakeFiles/test_tension_field_energy.dir/test_tension_field_energy.cc.s
 .PHONY : test_tension_field_energy.cc.s
 
+triangle_smoke.o: triangle_smoke.cc.o
+.PHONY : triangle_smoke.o
+
+# target to build an object file
+triangle_smoke.cc.o:
+	cd /Users/ryosukemotobayashi/Inflatables/build-py310 && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/triangle_smoke.dir/build.make tests/CMakeFiles/triangle_smoke.dir/triangle_smoke.cc.o
+.PHONY : triangle_smoke.cc.o
+
+triangle_smoke.i: triangle_smoke.cc.i
+.PHONY : triangle_smoke.i
+
+# target to preprocess a source file
+triangle_smoke.cc.i:
+	cd /Users/ryosukemotobayashi/Inflatables/build-py310 && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/triangle_smoke.dir/build.make tests/CMakeFiles/triangle_smoke.dir/triangle_smoke.cc.i
+.PHONY : triangle_smoke.cc.i
+
+triangle_smoke.s: triangle_smoke.cc.s
+.PHONY : triangle_smoke.s
+
+# target to generate assembly for a file
+triangle_smoke.cc.s:
+	cd /Users/ryosukemotobayashi/Inflatables/build-py310 && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/triangle_smoke.dir/build.make tests/CMakeFiles/triangle_smoke.dir/triangle_smoke.cc.s
+.PHONY : triangle_smoke.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -885,6 +923,7 @@ help:
 	@echo "... test_newton"
 	@echo "... test_svd_sensitivity"
 	@echo "... test_tension_field_energy"
+	@echo "... triangle_smoke"
 	@echo "... unit_tests"
 	@echo "... catch2_main.o"
 	@echo "... catch2_main.i"
@@ -910,6 +949,9 @@ help:
 	@echo "... test_tension_field_energy.o"
 	@echo "... test_tension_field_energy.i"
 	@echo "... test_tension_field_energy.s"
+	@echo "... triangle_smoke.o"
+	@echo "... triangle_smoke.i"
+	@echo "... triangle_smoke.s"
 .PHONY : help
 
 

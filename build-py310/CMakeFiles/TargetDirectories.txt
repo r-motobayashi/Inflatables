@@ -84,6 +84,8 @@
 /Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/CMakeFiles/install.dir
 /Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/CMakeFiles/install/local.dir
 /Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/CMakeFiles/install/strip.dir
+/Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/OffscreenRenderer/CMakeFiles/demo.dir
+/Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/OffscreenRenderer/CMakeFiles/demo_multicontext.dir
 /Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/OffscreenRenderer/CMakeFiles/test.dir
 /Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/OffscreenRenderer/CMakeFiles/edit_cache.dir
 /Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/OffscreenRenderer/CMakeFiles/rebuild_cache.dir
@@ -91,6 +93,14 @@
 /Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/OffscreenRenderer/CMakeFiles/install.dir
 /Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/OffscreenRenderer/CMakeFiles/install/local.dir
 /Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/OffscreenRenderer/CMakeFiles/install/strip.dir
+/Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/python_bindings/CMakeFiles/_offscreen_renderer.dir
+/Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/python_bindings/CMakeFiles/test.dir
+/Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/python_bindings/CMakeFiles/edit_cache.dir
+/Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/python_bindings/CMakeFiles/rebuild_cache.dir
+/Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/python_bindings/CMakeFiles/list_install_components.dir
+/Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/python_bindings/CMakeFiles/install.dir
+/Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/python_bindings/CMakeFiles/install/local.dir
+/Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/python_bindings/CMakeFiles/install/strip.dir
 /Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/StripePatterns/CMakeFiles/StripePatterns.dir
 /Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/StripePatterns/CMakeFiles/test.dir
 /Users/ryosukemotobayashi/Inflatables/build-py310/3rdparty/StripePatterns/CMakeFiles/edit_cache.dir
@@ -131,6 +141,7 @@
 /Users/ryosukemotobayashi/Inflatables/build-py310/tests/CMakeFiles/test_eig_sensitivity.dir
 /Users/ryosukemotobayashi/Inflatables/build-py310/tests/CMakeFiles/test_balloon_energy.dir
 /Users/ryosukemotobayashi/Inflatables/build-py310/tests/CMakeFiles/test_tension_field_energy.dir
+/Users/ryosukemotobayashi/Inflatables/build-py310/tests/CMakeFiles/triangle_smoke.dir
 /Users/ryosukemotobayashi/Inflatables/build-py310/tests/CMakeFiles/unit_tests.dir
 /Users/ryosukemotobayashi/Inflatables/build-py310/tests/CMakeFiles/Experimental.dir
 /Users/ryosukemotobayashi/Inflatables/build-py310/tests/CMakeFiles/Nightly.dir

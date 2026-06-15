@@ -6,7 +6,5 @@ C_DEFINES =
 
 C_INCLUDES = -isystem /Users/ryosukemotobayashi/Inflatables/3rdparty/MeshFEM/cmake/../3rdparty/tinyexpr
 
-C_FLAGSarm64 = -O3 -arch arm64 -fPIC   -fdiagnostics-color=always
-
-C_FLAGS = -O3 -arch arm64 -fPIC   -fdiagnostics-color=always
+C_FLAGS = -O3 -fPIC   -fdiagnostics-color=always
 

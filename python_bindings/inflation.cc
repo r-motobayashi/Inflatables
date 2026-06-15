@@ -4,6 +4,7 @@
 #include <pybind11/pybind11.h>
 #include <pybind11/stl.h>
 #include <pybind11/eigen.h>
+#include <pybind11/numpy.h>
 #include <pybind11/iostream.h>
 #include <pybind11/functional.h>
 namespace py = pybind11;
@@ -179,7 +180,29 @@ PYBIND11_MODULE(inflation, m) {
         .def("deformedWallVertexPositions", &InflatableSheet::deformedWallVertexPositions)
 
         .def("visualizationMesh", &InflatableSheet::visualizationMesh, py::arg("duplicateFusedTris") = false)
-        .def("visualizationField", &InflatableSheet::visualizationField, py::arg("field"), py::arg("duplicateFusedTris") = false)
+        .def("visualizationField", [](InflatableSheet &is, py::array_t<double, py::array::c_style | py::array::forcecast> field, bool duplicateFusedTris) {
+            auto buf = field.request();
+            if ((buf.ndim != 1) && (buf.ndim != 2))
+                throw std::runtime_error("Expected a 1D or 2D field array");
+
+            const auto rows = static_cast<Eigen::Index>(buf.shape[0]);
+            const auto cols = (buf.ndim == 1) ? Eigen::Index(1) : static_cast<Eigen::Index>(buf.shape[1]);
+            Eigen::MatrixXd fieldCopy(rows, cols);
+
+            const double *data = static_cast<const double *>(buf.ptr);
+            if (buf.ndim == 1) {
+                for (Eigen::Index i = 0; i < rows; ++i)
+                    fieldCopy(i, 0) = data[i];
+            }
+            else {
+                for (Eigen::Index i = 0; i < rows; ++i) {
+                    for (Eigen::Index j = 0; j < cols; ++j)
+                        fieldCopy(i, j) = data[i * cols + j];
+                }
+            }
+
+            return is.visualizationField(std::move(fieldCopy), duplicateFusedTris);
+        }, py::arg("field"), py::arg("duplicateFusedTris") = false)
         // Interface for MeshFEM's viewer
         .def("visualizationGeometry", [](const InflatableSheet &is, double normalCreaseAngle) { return getVisualizationGeometry(*is.visualizationMesh(), normalCreaseAngle); }, py::arg("normalCreaseAngle") =  M_PI)
 
